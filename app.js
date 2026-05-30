@@ -9,33 +9,27 @@
    DATA: Phases (Stundenverlaufsplan)
 ------------------------------------------------------------ */
 const PHASES = [
-  { n:1, start:0,    dur:120, name:'Begrüßung + Demo + Kernsatz',
-    content:'Lehrkraft demonstriert beidhändige Rückhand 2× in Zeitlupe (positiv, NICHT spiegelverkehrt). Kernsatz wird verbalisiert.',
+  { n:1, start:0,    dur:180, name:'Begrüßung + Demo + Kernsatz',
+    content:'Lehrkraft demonstriert beidhändige Rückhand 2× in Zeitlupe (positiv, NICHT spiegelverkehrt). Kernsatz wird verbalisiert: „Linke Hand wie Vorhand, rechte Hand wie ein Hammer — Schulter zum Netz, Treffpunkt vor dem vorderen Fuß, Schwung über die Schulter."',
     src:'Bandura-Modelllernen (Messmer 2023, S. 197); Verstehen vor Üben (Leineweber et al. 2025)' },
-  { n:2, start:120,  dur:120, name:'Aktivierung „Ballklavier"',
-    content:'Jede:r SuS prellt Ball frei mit beidhändigem Griff — kein Schlagziel, freie Erkundung.',
-    src:'Constraint-Led Approach (Renshaw et al. 2019); Bollnow-Glücksgefühl' },
-  { n:3, start:240,  dur:60,  name:'Gruppenbildung 5 × 5–6 SuS',
-    content:'Lehrkraft teilt SuS in 5 Gruppen ein (farbige Bänder); Trainer:innen führen jede Gruppe zur Startstation.',
+  { n:2, start:180,  dur:120, name:'Aktivierung „Ballklavier"',
+    content:'Jede:r SuS prellt den Ball frei mit beidhändigem Griff — kein Schlagziel, freie Materialerkundung. Trainer:innen verteilen sich, beobachten Griff.',
+    src:'Constraint-Led Approach (Renshaw et al. 2019); Bollnow-Glücksgefühl (Messmer 2023, S. 211)' },
+  { n:3, start:300,  dur:60,  name:'Gruppenbildung 3 × 8–10 SuS',
+    content:'Lehrkraft teilt die Klasse in drei Gruppen (farbige Bänder); jede Gruppe wird einer Trainer:in zugeteilt und zu ihrer Startstation geführt.',
     src:'Sozialform-Wechsel (Amaro-Amreín in Messmer 2023, S. 260)' },
-  { n:4, start:300,  dur:210, name:'Station A · Bewegungsspur',
-    content:'Schattenschwung ohne Ball; Treffpunkt-Markierung an Schnur auf Hüfthöhe.',
+  { n:4, start:360,  dur:300, name:'Station A · Bewegungsspur',
+    content:'Schattenschwung ohne Ball mit Schnur als Treffpunkt-Markierung auf Hüfthöhe. Drei Niveaustufen: Schwung ohne / mit Schritt / mit geschlossenen Augen.',
     src:'External Focus (Wulf 2013); Coaching im Timeout-Stil (Messmer 2023, S. 206)' },
-  { n:5, start:510,  dur:210, name:'Station B · Tee-Ball',
-    content:'SuS schlägt am ruhenden Ball auf Hütchen-Tee gegen Wand.',
-    src:'Methodische Reihe: ruhender Ball als Vereinfachung (Schönborn 2016; Ferrauti et al. 2016)' },
-  { n:6, start:720,  dur:210, name:'Station C · Sanfter Zuwurf',
-    content:'Trainer:in wirft Ball sanft aus 3 m; SuS schlägt zur Wand mit beidhändiger Rückhand.',
+  { n:5, start:660,  dur:300, name:'Station B · Sanfter Zuwurf',
+    content:'Trainer:in wirft Ball sanft aus 3 m; SuS schlägt mit beidhändiger Rückhand zur Wand. Niveau über Wurftempo + Aufsprunghöhe.',
     src:'Schrittweise Komplexitätserhöhung (Roth/Hossner 1996); kognitive → assoziative Phase (Fitts/Posner 1967)' },
-  { n:7, start:930,  dur:210, name:'Station D · Über die Schnur',
-    content:'Trainer:in wirft; SuS spielt Ball über Schnur (1 m Höhe) auf Mattenfeld.',
-    src:'Höhen- und Tempodosierung als Topspin-Vorform; Differenzierung durch Schnurhöhe (Messmer 2023, S. 279)' },
-  { n:8, start:1140, dur:210, name:'Station E · Mini-Rallye',
-    content:'Paare spielen beidhändige Rückhand hin-und-her über Schnur (1 m); Schläge zählen.',
+  { n:6, start:960,  dur:300, name:'Station C · Mini-Rallye über Schnur',
+    content:'Paarweise hin-und-her über 1-m-Schnur; Trainer:in füttert Bälle nach. Ziel: möglichst viele Schläge in Folge — affektives Erfolgserleben.',
     src:'Spielnaher Transfer (KLP NRW BF7); offene Aufgabenstellung (Messmer 2023, S. 279)' },
-  { n:9, start:1350, dur:150, name:'Reflexionssitzkreis',
-    content:'„Wo lag dein Treffpunkt? Was war einfach? Was schwer?" — 3 Wortmeldungen; Ausblick Folgestunde.',
-    src:'Strukturierte Reflexion als Ko-Konstruktion (Leineweber et al. 2025)' }
+  { n:7, start:1260, dur:240, name:'Reflexionssitzkreis',
+    content:'„Wo lag dein Treffpunkt? Was war einfach, was schwer? Welcher Cue hat geholfen?" — 3–4 Wortmeldungen; Ausblick auf Folgestunde.',
+    src:'Strukturierte Reflexion als Ko-Konstruktion (Leineweber et al. 2025); UK-Kompetenz KLP NRW G9' }
 ];
 const TOTAL_DURATION = 1500; // 25:00
 
@@ -47,7 +41,7 @@ const STATIONS = [
     letter:'A', name:'Bewegungsspur',
     motor:'Beidhändiger Schwung mit korrekter Seitstellung, Treffpunkt-Imagination, Finish über die Schulter.',
     cogn:'Bewegungsvorstellung des beidhändigen Rückhand-Schwungs mental verankern.',
-    duration:'3:30 min',
+    duration:'5:00 min',
     task:[
       'Seitstellung einnehmen, Schulter zum imaginierten Netz drehen.',
       '5× Schattenschwung langsam — Treffpunkt am Hütchen imaginieren.',
@@ -69,42 +63,18 @@ const STATIONS = [
           'Mehr als zwei Hinweise gleichzeitig']
   },
   {
-    letter:'B', name:'Tee-Ball',
-    motor:'Sauberen Treffpunkt vor dem Körper bei einem ruhenden Ball herstellen.',
-    cogn:'Auge-Schläger-Koordination wahrnehmen und Treffpunkt-Position verorten.',
-    duration:'3:30 min',
-    task:[
-      'Ball auf Hütchen positionieren — Hüfthöhe oder darunter.',
-      'Mit beidhändigem Rückhandschwung sanft gegen die Wand schlagen.',
-      'Ball aufnehmen, neu legen, wiederholen — 10 Versuche.'
-    ],
-    levels:{
-      light: 'Ball liegt auf Hütchen (Tee), vollständiger Stop davor möglich.',
-      mid:   'Selbstaufwurf aus der Hand, Ball nach einem Aufsprung treffen.',
-      hard:  'Selbstaufwurf höher + bewusster Schritt seitwärts vor dem Schlag.'
-    },
-    cues:[
-      '„Triff den Ball, wenn er den Boden noch sieht."',
-      '„Triff den Ball vor deinem vorderen Fuß."'
-    ],
-    error:{ name:'Ball wird hinter dem Körper / seitlich auf Höhe der Hüfte getroffen.',
-            fix:'„Triff den Ball, bevor er an deinem Fuß vorbei ist."' },
-    tabu:['Interne Korrekturen wie „Streck den Arm" — nur External-Focus-Cues',
-          'Mehr als ein Korrekturhinweis pro Versuchsrunde (3 Versuche)']
-  },
-  {
-    letter:'C', name:'Sanfter Zuwurf',
-    motor:'Bewegungsfluss bei extern zugespieltem Ball aufrechterhalten.',
+    letter:'B', name:'Sanfter Zuwurf',
+    motor:'Bewegungsfluss bei extern zugespieltem Ball aufrechterhalten — erster realer Ballkontakt.',
     cogn:'Flugbahn antizipieren und Treffpunkt-Timing anpassen.',
-    duration:'3:30 min',
+    duration:'5:00 min',
     task:[
       'In Bereitschaftsposition ca. 3 m vor Trainer:in stehen.',
-      'Zugeworfenen Ball mit beidhändigem Rückhandschlag zur Wand spielen — 8 Würfe.',
-      'Nach 8 Würfen weiterrücken, nächste SuS tritt vor.'
+      'Zugeworfenen Ball mit beidhändigem Rückhandschlag zur Wand spielen.',
+      'Nach 8 Würfen weiterrücken, nächste:r SuS tritt vor.'
     ],
     levels:{
       light: 'Wurf ohne Aufsprung — Ball kommt direkt auf Hüfthöhe.',
-      mid:   'Ein Aufsprung, mittlere Höhe — SuS wartet kurz.',
+      mid:   'Ein Aufsprung, mittlere Höhe — SuS wartet kurz auf Treffpunkt.',
       hard:  'Wurf leicht seitlich versetzt — SuS muss Anpassschritt machen.'
     },
     cues:[
@@ -114,44 +84,21 @@ const STATIONS = [
     error:{ name:'Ausschwung bricht vorzeitig ab, Schläger bleibt auf Hüfthöhe.',
             fix:'„Lass den Schläger an der Schulter parken."' },
     tabu:['Mehr als ein Hinweis pro 3 Versuche',
-          'Vergleichende Kommentare zwischen SuS']
+          'Vergleichende Kommentare zwischen SuS',
+          'Interne Korrekturen wie „Streck den Arm" — nur External-Focus-Cues']
   },
   {
-    letter:'D', name:'Über die Schnur',
-    motor:'Aufwärtsbewegung des Schlägers (Topspin-Vorform) einsetzen — Ball über Hindernis spielen.',
-    cogn:'Höhen- und Tempokontrolle als grundlegende Spielidee anwenden.',
-    duration:'3:30 min',
-    task:[
-      'Trainer:in wirft Ball sanft zu, SuS steht ca. 2 m vor der Schnur.',
-      'Ball mit Aufwärtsschwung über die 1-m-Schnur spielen.',
-      '6 Versuche — Treffer auf den Matten zählen (Selbst-Monitoring).'
-    ],
-    levels:{
-      light: 'Schnur 50 cm + großes Mattenfeld (zwei Matten nebeneinander).',
-      mid:   'Schnur 1 m + normales Mattenfeld (eine Matte).',
-      hard:  'Schnur 1,2 m + kleines Zielfeld (halbe Matte).'
-    },
-    cues:[
-      '„Schicke den Ball Richtung Hallenlampe."',
-      '„Bürste den Ball nach oben."'
-    ],
-    error:{ name:'Ball geht ins Netz / unter die Schnur — Schläger zu waagerecht.',
-            fix:'„Schicke den Ball Richtung Hallenlampe."' },
-    tabu:['Trefferquoten zwischen SuS NICHT vergleichen',
-          'Schnurhöhe nicht spontan für einzelne SuS verändern']
-  },
-  {
-    letter:'E', name:'Mini-Rallye',
+    letter:'C', name:'Mini-Rallye',
     motor:'Beidhändigen Rückhandschlag in spielnaher Situation flüssig anwenden (Transfer).',
     cogn:'Erfolgserlebnis durch gemeinsames Gelingen einer Serie (affektives Lernziel).',
-    duration:'3:30 min',
+    duration:'5:00 min',
     task:[
-      'Paarweise auf beiden Seiten der Schnur, ca. 3–4 m Abstand.',
-      'Sanft über die Schnur spielen — viele Schläge in Folge halten.',
-      'Schläge laut mitzählen; Trainer:in gibt sofort neue Bälle nach.'
+      'Paarweise auf beiden Seiten der 1-m-Schnur, ca. 3–4 m Abstand.',
+      'Sanft über die Schnur spielen — möglichst viele Schläge in Folge.',
+      'Schläge laut mitzählen; Trainer:in füttert Bälle nach Fehlern nach.'
     ],
     levels:{
-      light: 'SuS prellt Ball zuerst auf den Boden, dann Schlag (Halbvolley).',
+      light: 'SuS prellt Ball zuerst auf den Boden, dann Schlag (Halbvolley aus dem Selbstaufwurf).',
       mid:   'Direktes Spielen — Ball nach einem Aufsprung treffen.',
       hard:  'Längste Serie zählen — Welches Paar schafft 10 in Folge?'
     },
@@ -251,17 +198,17 @@ const BIBLIO = [
 ------------------------------------------------------------ */
 const MATERIAL = [
   ['Tennisschläger', 'Standard / Junior 27"', '30', '1/SuS + 5 Reserve'],
-  ['Tennisbälle', 'normal (druckvoll)', '60', '12/Station + 10 Reserve'],
-  ['Schaumstoffbälle', 'für Niveau ◐', '12', 'Niveau-1-Wahl'],
-  ['Hütchen', 'klein', '30', 'Tee + Treffpunkt'],
-  ['Schnur-Set', '5 m', '5', '1/Station, v. a. D'],
-  ['Pylonen', '1 m', '4', 'Schnüre kippsicher'],
-  ['Weichmatten', 'klein', '4', 'Zielfeld Station D'],
-  ['Pfeife', 'Lehrkraft', '1', 'Rotationssignal'],
-  ['Stationenkarten', 'A5 laminiert', '5', 'je Station'],
-  ['Klemmbretter', 'mit Stift', '5', 'pro Trainer:in'],
+  ['Tennisbälle', 'normal (druckvoll)', '50', '15/Station + 5 Reserve'],
+  ['Schaumstoffbälle', 'für Niveau ◐', '12', 'Niveau-1-Wahl Stationen B+C'],
+  ['Hütchen', 'klein', '20', 'Treffpunkt-Markierung Station A'],
+  ['Schnur-Set', '5 m', '2', 'Station A + Station C'],
+  ['Pylonen', '1 m', '4', 'Schnüre kippsicher (2 pro Schnur)'],
+  ['Weichmatten', 'klein', '2', 'Sicherheit Station C / Reserve'],
+  ['Pfeife', 'Lehrkraft', '1', 'Rotationssignal alle 5 Min'],
+  ['Stationenkarten', 'A5 laminiert', '3', 'je Station'],
+  ['Klemmbretter', 'mit Stift', '3', 'pro Trainer:in'],
   ['Erste-Hilfe-Tasche', '', '1', 'Position bekanntgeben'],
-  ['Klebeband', '3-m-Markierung', '1', 'Sicherheitszone']
+  ['Klebeband', '3-m-Markierung', '1', 'Sicherheitszone zwischen Stationen']
 ];
 
 /* ------------------------------------------------------------
@@ -600,7 +547,7 @@ function renderSafety() {
 ============================================================ */
 function renderFloorplan() {
   const svg = `
-    <svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg" aria-label="Hallenplan 27 × 15 m mit 5 Stationen und Sitzkreis">
+    <svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg" aria-label="Hallenplan 27 × 15 m mit 3 Stationen und Sitzkreis">
       <defs>
         <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
           <path d="M0,0 L10,5 L0,10 Z" fill="#2d6a4f"/>
@@ -612,64 +559,54 @@ function renderFloorplan() {
 
       <!-- Wand top label -->
       <rect x="20" y="20" width="500" height="6" fill="#2d6a4f"/>
-      <text x="270" y="38" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">WAND (Stationen B + C spielen zur Wand)</text>
+      <text x="270" y="38" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">WAND (Station B spielt zur Wand)</text>
 
       <!-- Sitzkreis center -->
       <circle cx="270" cy="160" r="44" fill="#d8efe1" stroke="#2d6a4f" stroke-width="2" stroke-dasharray="4 3"/>
       <text x="270" y="156" text-anchor="middle" font-size="11" fill="#1b4332" font-weight="700">SITZKREIS</text>
-      <text x="270" y="172" text-anchor="middle" font-size="9" fill="#1b4332">Phase 1 + 9 · L</text>
+      <text x="270" y="172" text-anchor="middle" font-size="9" fill="#1b4332">Phase 1 + 7 · L</text>
 
       <!-- Station boxes -->
       <g font-family="-apple-system, sans-serif" font-size="11" fill="#fff">
-        <!-- Station B (top-left) -->
-        <rect x="50" y="50" width="120" height="60" rx="6" fill="#2d6a4f"/>
-        <text x="110" y="72" text-anchor="middle" font-weight="800" font-size="14">B · Tee-Ball</text>
-        <text x="110" y="90" text-anchor="middle" font-size="9">Schlag am ruhenden Ball → Wand</text>
-        <text x="110" y="103" text-anchor="middle" font-size="9">[T] · 6 SuS</text>
+        <!-- Station A (top-left) - Bewegungsspur -->
+        <rect x="50" y="55" width="140" height="70" rx="6" fill="#2d6a4f"/>
+        <text x="120" y="80" text-anchor="middle" font-weight="800" font-size="15">A · Bewegungsspur</text>
+        <text x="120" y="98" text-anchor="middle" font-size="9">Schattenschwung an Schnur</text>
+        <text x="120" y="113" text-anchor="middle" font-size="9">[T] · 8–10 SuS · 5 Min</text>
 
-        <!-- Station C (top-right) -->
-        <rect x="370" y="50" width="120" height="60" rx="6" fill="#2d6a4f"/>
-        <text x="430" y="72" text-anchor="middle" font-weight="800" font-size="14">C · Sanfter Zuwurf</text>
-        <text x="430" y="90" text-anchor="middle" font-size="9">Trainer wirft → Wand</text>
-        <text x="430" y="103" text-anchor="middle" font-size="9">[T] · 6 SuS</text>
+        <!-- Station B (top-right) - Sanfter Zuwurf -->
+        <rect x="350" y="55" width="140" height="70" rx="6" fill="#2d6a4f"/>
+        <text x="420" y="80" text-anchor="middle" font-weight="800" font-size="15">B · Sanfter Zuwurf</text>
+        <text x="420" y="98" text-anchor="middle" font-size="9">Trainer:in wirft → Wand</text>
+        <text x="420" y="113" text-anchor="middle" font-size="9">[T] · 8–10 SuS · 5 Min</text>
 
-        <!-- Station A (bottom-left) -->
-        <rect x="50" y="220" width="120" height="60" rx="6" fill="#2d6a4f"/>
-        <text x="110" y="242" text-anchor="middle" font-weight="800" font-size="14">A · Bewegungsspur</text>
-        <text x="110" y="260" text-anchor="middle" font-size="9">Schattenschwung an Schnur</text>
-        <text x="110" y="273" text-anchor="middle" font-size="9">[T] · 6 SuS</text>
-
-        <!-- Station D (bottom-mid) -->
-        <rect x="210" y="220" width="120" height="60" rx="6" fill="#2d6a4f"/>
-        <text x="270" y="242" text-anchor="middle" font-weight="800" font-size="14">D · Über die Schnur</text>
-        <text x="270" y="260" text-anchor="middle" font-size="9">über 1-m-Schnur auf Matte</text>
-        <text x="270" y="273" text-anchor="middle" font-size="9">[T] · 6 SuS</text>
-
-        <!-- Station E (bottom-right) -->
-        <rect x="370" y="220" width="120" height="60" rx="6" fill="#2d6a4f"/>
-        <text x="430" y="242" text-anchor="middle" font-weight="800" font-size="14">E · Mini-Rallye</text>
-        <text x="430" y="260" text-anchor="middle" font-size="9">Paare über Schnur, Schläge zählen</text>
-        <text x="430" y="273" text-anchor="middle" font-size="9">[T] · 6 SuS</text>
+        <!-- Station C (bottom-center) - Mini-Rallye -->
+        <rect x="200" y="225" width="140" height="70" rx="6" fill="#2d6a4f"/>
+        <text x="270" y="250" text-anchor="middle" font-weight="800" font-size="15">C · Mini-Rallye</text>
+        <text x="270" y="268" text-anchor="middle" font-size="9">Paare über Schnur · zählen</text>
+        <text x="270" y="283" text-anchor="middle" font-size="9">[T] · 8–10 SuS · 5 Min</text>
       </g>
 
-      <!-- Rotation arrows A → B → C → D → E -->
+      <!-- Rotation arrows A → B → C -->
       <g fill="none" stroke="#74c69d" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrowhead)">
-        <path d="M170 240 Q120 180 110 115"/>
-        <path d="M175 80 Q260 50 365 80"/>
-        <path d="M425 115 Q400 170 335 240"/>
-        <path d="M370 250 Q360 250 335 250" stroke-dasharray="0"/>
+        <!-- A → B (oben quer) -->
+        <path d="M195 90 Q270 60 345 90"/>
+        <!-- B → C (rechts runter) -->
+        <path d="M420 130 Q400 200 340 250"/>
+        <!-- C → A (links hoch) -->
+        <path d="M200 250 Q140 200 120 130"/>
       </g>
 
       <!-- Rotation label -->
-      <text x="270" y="305" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="700">Rotation: A → B → C → D → E (alle 3:30 Min · Pfeifsignal Lehrkraft)</text>
+      <text x="270" y="312" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="700">Rotation: A → B → C (alle 5 Min · Pfeifsignal der Lehrkraft)</text>
 
       <!-- Material depot -->
       <g>
-        <rect x="475" y="135" width="40" height="50" fill="#f3f3ef" stroke="#c9c9c1" stroke-width="1.5" rx="3"/>
-        <text x="495" y="150" text-anchor="middle" font-size="7" fill="#6b6b6b">Material</text>
-        <text x="495" y="160" text-anchor="middle" font-size="7" fill="#6b6b6b">Reserve</text>
-        <text x="495" y="170" text-anchor="middle" font-size="7" fill="#b91c1c" font-weight="700">1. Hilfe</text>
-        <text x="495" y="180" text-anchor="middle" font-size="7" fill="#6b6b6b">Bälle</text>
+        <rect x="475" y="155" width="40" height="50" fill="#f3f3ef" stroke="#c9c9c1" stroke-width="1.5" rx="3"/>
+        <text x="495" y="170" text-anchor="middle" font-size="7" fill="#6b6b6b">Material</text>
+        <text x="495" y="180" text-anchor="middle" font-size="7" fill="#6b6b6b">Reserve</text>
+        <text x="495" y="190" text-anchor="middle" font-size="7" fill="#b91c1c" font-weight="700">1. Hilfe</text>
+        <text x="495" y="200" text-anchor="middle" font-size="7" fill="#6b6b6b">Bälle</text>
       </g>
     </svg>
   `;
@@ -887,27 +824,87 @@ function renderSusCards() {
 ============================================================ */
 function printStation(idx) {
   const s = STATIONS[idx];
-  const area = document.getElementById('printStationArea');
-  // A5-Druckkarte für die Station an der Halle.
-  // Bewusst OHNE Trainer-Hinweise (Cues, Fehler/Korrektur, Tabu) — nur Aufgabe + Niveaus.
-  area.innerHTML = `
-    <h1 style="font-size:18pt;margin:0">Station ${s.letter} · ${s.name}</h1>
-    <div class="station-letter">${s.letter}</div>
-    <p><strong>Lernziel motorisch:</strong> ${s.motor}</p>
-    <p><strong>Lernziel kognitiv:</strong> ${s.cogn}</p>
-    <p><strong>Dauer:</strong> ${s.duration}</p>
-    <h3>Aufgabe</h3>
-    <ol>${s.task.map(t => `<li>${t}</li>`).join('')}</ol>
-    <h3>Drei Niveaustufen</h3>
-    <p><strong>◐ leicht:</strong> ${s.levels.light}</p>
-    <p><strong>◐◐ mittel:</strong> ${s.levels.mid}</p>
-    <p><strong>◐◐◐ anspruchsvoll:</strong> ${s.levels.hard}</p>
-  `;
-  document.body.classList.add('print-station-mode');
-  setTimeout(() => {
-    window.print();
-    document.body.classList.remove('print-station-mode');
-  }, 100);
+  // iOS-Safari-robust: separates Print-Window mit eigenem Stylesheet,
+  // damit der Druck nicht die ganze Hauptseite umfasst.
+  const html = `<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<title>Station ${s.letter} · ${s.name}</title>
+<style>
+  @page { size: A5 portrait; margin: 1cm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.4;
+    padding: 1.5cm;
+  }
+  h1 { font-size: 18pt; margin: 0 0 4pt; color: #1b4332; }
+  .letter {
+    font-size: 96pt; line-height: .9; color: #2d6a4f;
+    font-weight: 800; margin: 4pt 0 8pt;
+  }
+  .meta { color: #555; font-size: 10pt; margin-bottom: 8pt; }
+  h2 {
+    font-size: 12pt; margin: 12pt 0 4pt; color: #1b4332;
+    border-bottom: 1px solid #95d5b2; padding-bottom: 2pt;
+  }
+  ol, ul { margin: 4pt 0 4pt 18pt; padding: 0; }
+  li { margin-bottom: 3pt; font-size: 10.5pt; }
+  p { margin: 4pt 0; font-size: 10.5pt; }
+  .levels p { margin: 3pt 0; padding-left: 8pt; border-left: 2px solid #95d5b2; }
+  @media print {
+    body { padding: 0; }
+    .print-action { display: none !important; }
+  }
+  .print-action {
+    position: fixed; top: 12pt; right: 12pt;
+    background: #2d6a4f; color: #fff; border: 0;
+    padding: 8pt 14pt; border-radius: 4pt;
+    font: inherit; font-weight: 600; cursor: pointer;
+  }
+</style>
+</head><body>
+  <button class="print-action" onclick="window.print()">Drucken</button>
+  <h1>Station ${s.letter} · ${s.name}</h1>
+  <div class="letter">${s.letter}</div>
+  <p class="meta"><strong>Dauer:</strong> ${s.duration}</p>
+  <p><strong>Lernziel motorisch:</strong> ${s.motor}</p>
+  <p><strong>Lernziel kognitiv:</strong> ${s.cogn}</p>
+  <h2>Aufgabe</h2>
+  <ol>${s.task.map(t => `<li>${escapeHtml(t)}</li>`).join('')}</ol>
+  <h2>Drei Niveaustufen</h2>
+  <div class="levels">
+    <p><strong>◐ leicht:</strong> ${escapeHtml(s.levels.light)}</p>
+    <p><strong>◐◐ mittel:</strong> ${escapeHtml(s.levels.mid)}</p>
+    <p><strong>◐◐◐ anspruchsvoll:</strong> ${escapeHtml(s.levels.hard)}</p>
+  </div>
+  <script>
+    // Auf iOS Safari klappt window.print() im onload-Handler oft
+    // erst nach Viewport-Settle. Daher mit kurzer Verzögerung.
+    window.addEventListener('load', function () {
+      setTimeout(function () { try { window.print(); } catch (e) {} }, 350);
+    });
+  </script>
+</body></html>`;
+
+  const w = window.open('', '_blank', 'noopener,noreferrer');
+  if (!w) {
+    // Popup blockiert (typisch iOS) — Fallback: data-URL
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    window.location.href = url;
+    return;
+  }
+  w.document.open();
+  w.document.write(html);
+  w.document.close();
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
 }
 
 function printObservation() {

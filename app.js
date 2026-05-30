@@ -10,13 +10,13 @@
 ------------------------------------------------------------ */
 const PHASES = [
   { n:1, start:0,    dur:180, name:'Begrüßung + Demo + Kernsatz',
-    content:'Lehrkraft demonstriert beidhändige Rückhand 2× in Zeitlupe (positiv, NICHT spiegelverkehrt). Kernsatz wird verbalisiert: „Linke Hand wie Vorhand, rechte Hand wie ein Hammer — Schulter zum Netz, Treffpunkt vor dem vorderen Fuß, Schwung über die Schulter."',
+    content:'Übungsleiter:in demonstriert beidhändige Rückhand 2× in Zeitlupe (positiv, NICHT spiegelverkehrt). Kernsatz wird verbalisiert: „Linke Hand wie Vorhand, rechte Hand wie ein Hammer — Schulter zum Netz, Treffpunkt vor dem vorderen Fuß, Schwung über die Schulter."',
     src:'Bandura-Modelllernen (Messmer 2023, S. 197); Verstehen vor Üben (Leineweber et al. 2025)' },
   { n:2, start:180,  dur:120, name:'Aktivierung „Ballklavier"',
     content:'Jede:r SuS prellt den Ball frei mit beidhändigem Griff — kein Schlagziel, freie Materialerkundung. Trainer:innen verteilen sich, beobachten Griff.',
     src:'Constraint-Led Approach (Renshaw et al. 2019); Bollnow-Glücksgefühl (Messmer 2023, S. 211)' },
   { n:3, start:300,  dur:60,  name:'Gruppenbildung 3 × 8–10 SuS',
-    content:'Lehrkraft teilt die Klasse in drei Gruppen (farbige Bänder); jede Gruppe wird einer Trainer:in zugeteilt und zu ihrer Startstation geführt.',
+    content:'Übungsleiter:in teilt die Klasse in drei Gruppen (farbige Bänder); jede Gruppe wird einer Trainer:in zugeteilt und zu ihrer Startstation geführt.',
     src:'Sozialform-Wechsel (Amaro-Amreín in Messmer 2023, S. 260)' },
   { n:4, start:360,  dur:300, name:'Station A · Bewegungsspur',
     content:'Schattenschwung ohne Ball mit Schnur als Treffpunkt-Markierung auf Hüfthöhe. Drei Niveaustufen: Schwung ohne / mit Schritt / mit geschlossenen Augen.',
@@ -130,7 +130,7 @@ const PRINCIPLES = [
     body:'Keine Hinweisflut. SuS brauchen Zeit zum Spüren. Faustregel: SuS macht 3 Versuche → kurzer Cue → 3 weitere → ggf. neuer Cue.',
     src:'Coaching im Timeout-Stil (Messmer 2023, S. 206)' },
   { title:'5. Sicherheit zuerst',
-    body:'Mindestabstand 3 m beim Schwungholen. Wartereihe SEITLICH der schwingenden SuS, NIE hinter. Bälle nach jeder Runde einsammeln. Schläger nicht werfen. Bei Schmerz im Handgelenk → Pause + sofort Lehrkraft.',
+    body:'Mindestabstand 3 m beim Schwungholen. Wartereihe SEITLICH der schwingenden SuS, NIE hinter. Bälle nach jeder Runde einsammeln. Schläger nicht werfen. Bei Schmerz im Handgelenk → Pause + sofort Übungsleiter:in.',
     src:'DGUV-Information 202-005' }
 ];
 
@@ -204,7 +204,7 @@ const MATERIAL = [
   ['Schnur-Set', '5 m', '2', 'Station A + Station C'],
   ['Pylonen', '1 m', '4', 'Schnüre kippsicher (2 pro Schnur)'],
   ['Weichmatten', 'klein', '2', 'Sicherheit Station C / Reserve'],
-  ['Pfeife', 'Lehrkraft', '1', 'Rotationssignal alle 5 Min'],
+  ['Pfeife', 'Übungsleiter:in', '1', 'Rotationssignal alle 5 Min'],
   ['Stationenkarten', 'A5 laminiert', '3', 'je Station'],
   ['Klemmbretter', 'mit Stift', '3', 'pro Trainer:in'],
   ['Erste-Hilfe-Tasche', '', '1', 'Position bekanntgeben'],
@@ -233,8 +233,8 @@ const SAFETY = {
     'Wartereihen IMMER seitlich, nie hinter Schwungrichtung',
     'Bälle nach jeder Runde einsammeln',
     'Schläger nicht werfen — sofort intervenieren',
-    'Bei Schmerz Handgelenk/Schulter → Pause, Lehrkraft',
-    'Lehrkraft hat Gesamtüberblick, Rotation per Pfeife'
+    'Bei Schmerz Handgelenk/Schulter → Pause, Übungsleiter:in',
+    'Übungsleiter:in hat Gesamtüberblick, Rotation per Pfeife'
   ],
   nach: [
     'Bälle einsammeln (Eimer-Zählung)',
@@ -598,7 +598,7 @@ function renderFloorplan() {
       </g>
 
       <!-- Rotation label -->
-      <text x="270" y="312" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="700">Rotation: A → B → C (alle 5 Min · Pfeifsignal der Lehrkraft)</text>
+      <text x="270" y="312" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="700">Rotation: A → B → C (alle 5 Min · Pfeifsignal der Übungsleiter:in)</text>
 
       <!-- Material depot -->
       <g>

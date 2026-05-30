@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tennis-Rückhand · Klasse 10 · 25 Minuten</title>
+  <meta name="description" content="Interaktive Sportstunden-Dokumentation: Einführung beidhändige Tennis-Rückhand für Klasse 10 Gymnasium NRW, 25 Minuten, 5 Trainer:innen, Lernzirkel mit 5 Stationen." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 16 Q16 4 30 16 Q16 28 2 16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <strong>Tennis-Rückhand · 25 Min</strong>
+          <small>Klasse 10 · Gymnasium NRW</small>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Hauptnavigation">
+        <a href="#hero">Übersicht</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#phases">Bewegung</a>
+        <a href="#stations">Stationen</a>
+        <a href="#trainer">Trainer</a>
+        <a href="#theory">Theorie</a>
+        <a href="#material">Material</a>
+        <a href="#observation">Bögen</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="mini-timer" aria-live="polite">
+          <span class="mini-timer-phase" id="miniTimerPhase">Bereit</span>
+          <span class="mini-timer-clock" id="miniTimerClock">25:00</span>
+        </div>
+        <button id="themeToggle" class="icon-button" type="button" aria-label="Farbmodus umschalten" title="Hell / Dunkel">
+          <span class="theme-icon-light" aria-hidden="true">☀</span>
+          <span class="theme-icon-dark" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-grid container">
+        <div class="hero-text">
+          <p class="eyebrow">Sportunterricht · 10. Klasse · Gymnasium NRW</p>
+          <h1>Tennis-Rückhand · Klasse 10 · 25 Minuten</h1>
+          <p class="hero-sub">Einführung beidhändige Rückhand · Gymnasium NRW · 5 Trainer:innen · normale Tennisbälle · Lernzirkel mit 5 Stationen</p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">21<small>/25 Min</small></span>
+              <span class="stat-label">Bewegung · 84 %</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">5</span>
+              <span class="stat-label">Stationen</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Niveaustufen</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">16</span>
+              <span class="stat-label">Quellen</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#timeline" id="startLessonBtn">Stunde starten</a>
+            <a class="btn ghost" href="#stations">Stationen ansehen</a>
+          </div>
+
+          <p class="hero-cue">
+            <strong>Kernsatz:</strong> „Hände wie ein Baseball-Schläger — rechte unten, linke oben. Triff den Ball vor deinem vorderen Fuß. Schwung hoch über die Schulter."
+          </p>
+        </div>
+
+        <figure class="hero-figure">
+          <img src="assets/img/henin_backhand.jpg" alt="Justine Henin spielt eine Rückhand bei einem Tennisturnier" loading="lazy" />
+          <figcaption>
+            <strong>Justine Henin · Rückhand</strong><br>
+            Foto: Bill Mitchell · Lizenz: Copyrighted free use ·
+            <a href="https://commons.wikimedia.org/wiki/File:Justine_Henin.JPG" target="_blank" rel="noopener">Wikimedia Commons</a> · abgerufen 30.05.2026
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="timeline-section">
+      <div class="container">
+        <h2>Stunden-Timeline mit Live-Timer</h2>
+        <p class="lead">Neun Phasen über 25 Minuten — Bewegungsanteil 21 Min (84 %).</p>
+
+        <div class="timer-panel" role="region" aria-label="Live-Timer">
+          <div class="timer-display">
+            <div class="timer-current">
+              <span class="timer-label" id="timerLabel">Phase 1 · Begrüßung + Demo</span>
+              <span class="timer-clock" id="timerClock">02:00</span>
+            </div>
+            <div class="timer-overall">
+              <div class="overall-bar"><div class="overall-fill" id="overallFill"></div></div>
+              <span id="overallText">0:00 / 25:00</span>
+            </div>
+          </div>
+          <div class="timer-controls">
+            <button type="button" class="btn primary" id="btnStart">Start</button>
+            <button type="button" class="btn" id="btnPause" disabled>Pause</button>
+            <button type="button" class="btn ghost" id="btnReset">Reset</button>
+            <label class="toggle">
+              <input type="checkbox" id="soundToggle" checked />
+              <span>Beep</span>
+            </label>
+            <label class="toggle">
+              <input type="checkbox" id="notifyToggle" />
+              <span>Benachrichtigung</span>
+            </label>
+          </div>
+          <p class="timer-hint">Tastatur: <kbd>Leertaste</kbd> Start/Pause · <kbd>R</kbd> Reset</p>
+        </div>
+
+        <ol class="phase-list" id="phaseList" aria-label="Phasen der Stunde"></ol>
+      </div>
+    </section>
+
+    <!-- BEWEGUNGSPHASEN -->
+    <section id="phases" class="phases-section">
+      <div class="container">
+        <h2>Bewegungsphasen der beidhändigen Rückhand</h2>
+        <p class="lead">Vier Phasen nach Schönborn (2016, S. 144 ff.) und Ferrauti et al. (2016, S. 220 f.). Fotos illustrieren die Zielform — Demonstration positiv, NICHT spiegelverkehrt (Messmer 2023, S. 198).</p>
+
+        <div class="phase-photos">
+          <figure>
+            <div class="phase-num">1</div>
+            <h3>Ausgangsstellung</h3>
+            <img src="assets/img/henin_backhand.jpg" alt="Spielerin in Bereitschaftsposition mit beidhändigem Griff" loading="lazy" />
+            <p>Parallele Fußstellung in Schulterbreite, Schläger vor dem Körper im neutralen Griff, Knie leicht gebeugt, Blick zur Ballquelle.</p>
+            <figcaption>Foto: Bill Mitchell · Copyrighted free use · <a href="https://commons.wikimedia.org/wiki/File:Justine_Henin.JPG" target="_blank" rel="noopener">Commons</a></figcaption>
+          </figure>
+          <figure>
+            <div class="phase-num">2</div>
+            <h3>Ausholen</h3>
+            <img src="assets/img/murray_backhand.jpg" alt="Andy Murray holt zur beidhändigen Rückhand aus" loading="lazy" />
+            <p>Kurze, flache Rückführung des Schlägers auf Schulterhöhe der Nicht-Schlagseite, Oberkörperrotation aus der Hüfte, Gewicht aufs hintere Bein.</p>
+            <figcaption>Foto: Carine06 · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Andy_Murray_backhand_(8155692116).jpg" target="_blank" rel="noopener">Commons</a></figcaption>
+          </figure>
+          <figure>
+            <div class="phase-num">3</div>
+            <h3>Treffpunkt</h3>
+            <img src="assets/img/ferrer_backhand.jpg" alt="David Ferrer am Treffpunkt einer beidhändigen Rückhand" loading="lazy" />
+            <p>Ball wird in Hüfthöhe vor dem vorderen Fuß getroffen, Schlägerfläche senkrecht, beide Arme leicht gebeugt, Gewichtsverlagerung nach vorn.</p>
+            <figcaption>Foto: IvanAndreevich · GFDL / CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:David_Ferrer_Running_Backhand_01.jpg" target="_blank" rel="noopener">Commons</a></figcaption>
+          </figure>
+          <figure>
+            <div class="phase-num">4</div>
+            <h3>Ausschwingen</h3>
+            <img src="assets/img/federer_backhand.jpg" alt="Roger Federer im Finish einer Rückhand mit Schwung über die Schulter" loading="lazy" />
+            <p>Schläger schwingt diagonal aufwärts über die gegenüberliegende Schulter aus, Oberkörper bleibt rotiert, Blick folgt dem Ball.</p>
+            <figcaption>Foto: Carine06 · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_Carine06_-_Roger_Federer_backhand.jpg" target="_blank" rel="noopener">Commons</a></figcaption>
+          </figure>
+        </div>
+
+        <div class="grip-court-grid">
+          <article class="card">
+            <h3>Beidhändiger Griff (Querschnitt)</h3>
+            <div id="gripDiagram"></div>
+            <p class="muted small">Rechte Hand (unten) im Continental-Griff · linke Hand (oben) im Eastern-Vorhand-Griff. Linkshänder:innen invertieren die Anordnung.</p>
+          </article>
+
+          <article class="card">
+            <h3>Tennisplatz-Maße (ITF 2026)</h3>
+            <div id="courtDiagram"></div>
+            <p class="muted small">23,77 m × 8,23 m (Einzel) / 10,97 m (Doppel) · Netzhöhe Mitte 0,914 m · an den Pfosten 1,07 m. Quelle: ITF Rules of Tennis 2026.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATIONS -->
+    <section id="stations" class="stations-section">
+      <div class="container">
+        <h2>Die fünf Stationen</h2>
+        <p class="lead">Lernzirkel · 3:30 Min pro Rotation · 5–6 SuS pro Station · drei Niveaustufen je Aufgabe.</p>
+        <div class="stations-grid" id="stationsGrid"></div>
+      </div>
+    </section>
+
+    <!-- TRAINER -->
+    <section id="trainer" class="trainer-section">
+      <div class="container">
+        <h2>Trainer:innen-Briefing</h2>
+        <p class="lead">Ihr seid <strong>Lernhelfer:innen, nicht Vorturner:innen</strong>. Coaching im Timeout-Stil (Messmer, 2023, S. 206).</p>
+
+        <h3>Die fünf goldenen Coaching-Prinzipien</h3>
+        <div class="accordion" id="principlesAccordion"></div>
+
+        <h3>Cue-Cards · External Focus (Wulf 2013)</h3>
+        <p class="muted">Hover oder Tap dreht die Karte. Vorderseite: Cue. Rückseite: wann anwenden?</p>
+        <div class="cue-grid" id="cueGrid"></div>
+
+        <h3>Tabu-Liste</h3>
+        <ul class="tabu-list">
+          <li>Spiegelverkehrt vorzeigen (Messmer, 2023, S. 198)</li>
+          <li>Negative Demo: „So macht man es FALSCH." (S. 200 f.)</li>
+          <li>Mehrere Fehler gleichzeitig korrigieren</li>
+          <li>Selbst lange spielen — das ist nicht eure Stunde</li>
+          <li>Ironie · Sarkasmus · Spitznamen</li>
+          <li>Geschlechterstereotype Sprache</li>
+          <li>Vergleiche zwischen SuS</li>
+          <li>Schläger-Modifikationen während der Stunde</li>
+        </ul>
+
+        <h3>Stations-Zuordnung</h3>
+        <table class="data-table">
+          <thead><tr><th>Station</th><th>Trainer:in</th><th>Kernaufgabe</th></tr></thead>
+          <tbody>
+            <tr><td>A „Bewegungsspur"</td><td>Trainer:in A</td><td>Schattenschwung ohne Ball, Treffpunkt-Imagination an Schnur</td></tr>
+            <tr><td>B „Tee-Ball"</td><td>Trainer:in B</td><td>Schlag am ruhenden Ball gegen Wand</td></tr>
+            <tr><td>C „Sanfter Zuwurf"</td><td>Trainer:in C</td><td>Wirft aus 3 m, SuS schlägt zur Wand</td></tr>
+            <tr><td>D „Über die Schnur"</td><td>Trainer:in D</td><td>Wirft, SuS spielt über 1 m-Schnur auf Matte</td></tr>
+            <tr><td>E „Mini-Rallye"</td><td>Trainer:in E</td><td>Paare hin-und-her über Schnur, Schläge zählen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- THEORY -->
+    <section id="theory" class="theory-section">
+      <div class="container">
+        <h2>Theorie & Hintergrund</h2>
+        <p class="lead">Die Stunde stützt sich auf ein integriertes Theorienetz aus motorischer Lernforschung und Sportdidaktik.</p>
+        <div class="accordion" id="theoryAccordion"></div>
+
+        <h3>Literaturverzeichnis</h3>
+        <ol class="bibliography" id="bibliography"></ol>
+        <p class="muted small">Onlinequellen letzter Abruf: 30. Mai 2026.</p>
+      </div>
+    </section>
+
+    <!-- MATERIAL -->
+    <section id="material" class="material-section">
+      <div class="container">
+        <h2>Material · Sicherheit · Hallenplan</h2>
+        <div class="material-grid">
+
+          <article class="card">
+            <h3>Materialliste</h3>
+            <table class="data-table compact" id="materialTable"></table>
+            <p class="muted small">Aufbauzeit: ca. 12 Min vor Stundenbeginn.</p>
+          </article>
+
+          <article class="card">
+            <h3>Sicherheits-Checkliste</h3>
+            <p class="muted small">Status wird lokal im Browser gespeichert.</p>
+            <details open>
+              <summary>Vor der Stunde</summary>
+              <ul class="check-list" data-group="vor"></ul>
+            </details>
+            <details>
+              <summary>Während der Stunde</summary>
+              <ul class="check-list" data-group="waehrend"></ul>
+            </details>
+            <details>
+              <summary>Nach der Stunde</summary>
+              <ul class="check-list" data-group="nach"></ul>
+            </details>
+            <button type="button" class="btn ghost small" id="resetSafety">Checkliste zurücksetzen</button>
+          </article>
+
+          <article class="card">
+            <h3>Hallenplan</h3>
+            <p class="muted small">Schul-Sporthalle 27 × 15 m · 5 Stationen · zentraler Sitzkreis · 3-m-Sicherheitszonen.</p>
+            <div class="floorplan-wrap" id="floorplan"></div>
+            <p class="floorplan-legend">
+              <span class="lg lg-station"></span> Station &nbsp;
+              <span class="lg lg-circle"></span> Sitzkreis &nbsp;
+              <span class="lg lg-rotation"></span> Rotation A → B → C → D → E
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBSERVATION -->
+    <section id="observation" class="observation-section">
+      <div class="container">
+        <h2>Beobachtung & Reflexion</h2>
+
+        <div class="subtabs" role="tablist">
+          <button type="button" class="subtab active" role="tab" aria-selected="true" data-target="form-trainer">Trainer-Beobachtungsbogen</button>
+          <button type="button" class="subtab" role="tab" aria-selected="false" data-target="form-sus">SuS-Reflexionskarten</button>
+        </div>
+
+        <div id="form-trainer" class="subtab-panel active">
+          <form class="observation-form" id="observationForm">
+            <div class="form-row">
+              <label>Trainer:in <input type="text" name="trainer" placeholder="Name" /></label>
+              <label>Datum <input type="date" name="datum" value="2026-05-30" /></label>
+              <label>Station
+                <select name="station">
+                  <option>A — Bewegungsspur</option>
+                  <option>B — Tee-Ball</option>
+                  <option>C — Sanfter Zuwurf</option>
+                  <option>D — Über die Schnur</option>
+                  <option>E — Mini-Rallye</option>
+                </select>
+              </label>
+            </div>
+
+            <p class="form-legend"><strong>Skala:</strong> 1 noch nicht · 2 teilweise · 3 sicher · <strong>Niveau SuS:</strong> ◐ leicht · ◐◐ mittel · ◐◐◐ anspruchsvoll</p>
+
+            <div class="table-scroll">
+              <table class="data-table observation-table" id="observationTable"></table>
+            </div>
+
+            <h3>Reflexion am Stundenende</h3>
+            <label class="textarea-label">Welche:r SuS hat sich besonders entwickelt? (Name + Beobachtung)
+              <textarea name="reflexion1" rows="3"></textarea>
+            </label>
+            <label class="textarea-label">Welcher Cue hat am besten gewirkt?
+              <textarea name="reflexion2" rows="3"></textarea>
+            </label>
+            <label class="textarea-label">Was würde ich nächstes Mal anders machen?
+              <textarea name="reflexion3" rows="3"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="button" class="btn primary" id="printObservation">Als PDF drucken</button>
+              <button type="reset" class="btn ghost">Formular leeren</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="form-sus" class="subtab-panel">
+          <p class="muted">A4-Druckbogen mit 6 SuS-Reflexionskarten.</p>
+          <button type="button" class="btn primary" id="printSusCards">Reflexionskarten drucken</button>
+          <div class="sus-cards-sheet" id="susCardsSheet"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Sportunterricht · 10. Klasse · Gymnasium NRW</p>
+
+      <details class="image-credits">
+        <summary>Bildnachweise</summary>
+        <ul>
+          <li><strong>Justine Henin · Rückhand</strong> — Foto: Bill Mitchell · Lizenz: Copyrighted free use ·
+            <a href="https://commons.wikimedia.org/wiki/File:Justine_Henin.JPG" target="_blank" rel="noopener">Wikimedia Commons</a> · abgerufen 30.05.2026</li>
+          <li><strong>Andy Murray · Rückhand-Ausholbewegung</strong> — Foto: Carine06 · Lizenz: CC BY-SA 2.0 ·
+            <a href="https://commons.wikimedia.org/wiki/File:Andy_Murray_backhand_(8155692116).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · abgerufen 30.05.2026</li>
+          <li><strong>David Ferrer · Treffpunkt</strong> — Foto: IvanAndreevich · Lizenz: GFDL 1.2+ / CC BY 3.0 ·
+            <a href="https://commons.wikimedia.org/wiki/File:David_Ferrer_Running_Backhand_01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · abgerufen 30.05.2026</li>
+          <li><strong>Roger Federer · Finish</strong> — Foto: Carine06 · Lizenz: CC BY-SA 2.0 ·
+            <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_Carine06_-_Roger_Federer_backhand.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · abgerufen 30.05.2026</li>
+          <li>SVG-Diagramme (Hallenplan, Tennisplatz, Griff): eigene Erstellung, alle Rechte bei der Verfasserin.</li>
+        </ul>
+      </details>
+
+      <p class="muted small">Letzte Recherche-Verifikation: 30.05.2026 · Quelldateien:
+        <a href="../01_Hausarbeit_Didaktische_Ausarbeitung.md">Hausarbeit</a> ·
+        <a href="../02_Stundenverlaufsplan.md">Verlaufsplan</a> ·
+        <a href="../04_Stationenkarten.md">Stationen</a> ·
+        <a href="../05_Trainer_Briefing.md">Briefing</a> ·
+        <a href="../07_Beobachtungs_und_Reflexionsbogen.md">Bögen</a> ·
+        <a href="../08_Materialliste_Sicherheit_Hallenplan.md">Material</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="print-only print-station" id="printStationArea" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
